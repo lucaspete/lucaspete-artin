@@ -19,6 +19,7 @@ route.put("/produtos", async (req, res) => {
         return false
     }
         var mudanca = 'Produto alterado\n';
+        await Produto.updateOne({ _id: _id }, { $set: { nome: nome, preco: preco, imagem: imagem, descricao: descricao, quantidade: quantidade }})
     res.send(mudanca)
 })
 
@@ -30,6 +31,7 @@ route.delete("/produtos", async (req, res) => {
         return false
     }
     var mudanca = "O produto "+dados.nome+" foi excluído";
+    await Produto.updateOne({ _id: _id }, { $set: { ativo: false }})
     res.send(mudanca);
 })
 
