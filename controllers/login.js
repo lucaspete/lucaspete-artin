@@ -5,7 +5,7 @@ const route = express.Router()
 const Usuario = require("../models/usuarios")
 
 const jwt = require("jsonwebtoken") 
-require("dotenv/config")
+require("dotenv/config") 
 
 route.post("/login", async (req, res) => {
     const { usuario, senha } = req.body
