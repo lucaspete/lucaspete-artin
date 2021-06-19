@@ -7,7 +7,7 @@ app.use(express.json())
 app.use(cors())
 
 app.get("/", (req, res) => {
-    res.send("LULA LADRÃO, ROUBOU MEU CORAÇÃO")
+    res.send("Lucas Pete RA.:010618010")
 })
 
 require("./controllers/login")(app)
@@ -24,5 +24,6 @@ app.use((req, res) => {
 })
 
 app.listen(process.env.PORT || 80, () => {
-    console.log("servidor online")
+    console.log("Servidor online")
 })
+
