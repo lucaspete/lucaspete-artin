@@ -4,7 +4,7 @@ const route = express.Router()
 
 const Usuario = require("../models/usuarios")
 
-const jwt = require("jsonwebtoken")
+const jwt = require("jsonwebtoken") 
 require("dotenv/config")
 
 route.post("/login", async (req, res) => {
